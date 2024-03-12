@@ -1,0 +1,313 @@
+// code 1
+#include <iostream>
+#include "exercise.h"
+
+void unique_numbers( int numbers[], unsigned int collection_size){
+    
+   //Don't modify anthing above this line
+   //Your code should go below this line
+    
+   //The array that is going to store unique data  
+   int unique_data [20];
+
+
+   unsigned int unique_counter{};//Initialized to zero. Counts the elements we have in 
+                                //the unique_data array
+
+   for(unsigned int i{}; i < collection_size; ++i)
+   {
+
+    bool already_in{false};
+
+    //See if  the element is not already in our unique_data
+    for(unsigned int j{};j < unique_counter; ++j){
+        
+      //If we find that the element is already in our unique_data array,
+      //we say that the element at current iteration is a duplicate and
+      //break out of the loop
+      if(unique_data[j] == numbers[i]){
+        already_in = true;
+        break;
+      }
+    }
+
+    //If the element isn't already in, we put it in and increment the counter
+    //Please understand the use of the postfix operator here.
+    if(!already_in){
+      unique_data[unique_counter++] = numbers[i];
+    }
+    
+  }
+
+  std::cout << "The collection contains " << unique_counter << " unique numbers, they are : ";
+
+  for(unsigned int i{};i < unique_counter ; ++i){
+    std::cout << unique_data[i] << " ";
+  }    
+  
+  //Your code should go above this line
+  //Don't modify anything below this line
+
+  // code 2
+
+  
+#include <iostream>
+#include "exercise.h"
+
+bool is_collection_sorted(int numbers[], unsigned int collection_size){
+
+  bool sorted{true}; // Assume the collection is sorted from the start
+
+  for(unsigned int i{}; i < collection_size;++i){
+    if(i == 0){
+      continue;
+    }
+
+    //If we spot an element not greater than its predecessor, 
+    // we immediately flag the collection as not sorted.
+    if(!(numbers[i] > numbers[i-1])){
+      sorted = false;
+      break;
+    }
+
+  }
+
+  return sorted;
+}
+
+// code 3
+
+#include <iostream>
+#include "exercise.h"
+
+void hunt_for_vowels(char message[], unsigned int size){
+    
+
+  unsigned int vowel_count{};//Initialized to zero
+  
+  //Don't modify anything above this line
+  //Your code should go below this line
+
+  for(unsigned int i{}; i < size;++i){
+
+    if((message[i] == 'A')||
+    (message[i] == 'E')||
+    (message[i] == 'I')||
+    (message[i] == 'O')||
+    (message[i] == 'U')||
+    (message[i] == 'a')||
+    (message[i] == 'e')||
+    (message[i] == 'i')||
+    (message[i] == 'o')||
+    (message[i] == 'u')){
+      ++vowel_count;
+    }
+  }
+  
+  //Your code should go above this line
+  //Don't modify anything below this line
+  
+  
+  std::cout << "The string : " << message << " has " << vowel_count << " vowels";
+
+    
+    
+    
+}
+
+// code 4 Calculator IMP
+
+#include <iostream>
+
+#include<ctime>
+
+
+
+int main(){
+
+
+
+    std::srand(std::time(0));
+
+   
+
+bool end{false};
+
+
+
+    std::cout << "Welcome to the greatest calculator on Earth! " << std::endl;
+
+
+
+while (!end){
+
+   
+
+    int num1 =rand()%200;;
+
+    int num2 =rand()%200;
+
+ 
+
+
+
+    int a= static_cast<size_t>((std::rand()%4));
+
+
+
+switch(a){
+
+
+
+            case 0 :
+
+             std::cout << "What's the result of " << num1 << " + " << num2 << " : ";
+
+            break;
+
+            case 1 :
+
+             std::cout << "What's the result of " << num1 << " - " << num2 << " : ";
+
+            break;
+
+            case 2 :
+
+              std::cout << "What's the result of " << num1 << " * " << num2 << " : ";
+
+            break;
+
+            default :
+
+              std::cout << "What's the result of " << num1 << " / " << num2 << " : ";
+
+            break;
+
+        }
+
+
+
+        int result;
+
+        std::cin >> result;
+
+
+
+            switch(a){
+
+            case 0 :
+
+             if(result == (num1 + num2)){
+
+                 std::cout << "Congratulations! You got the result "
+
+                     << result << " right!" << std::endl;
+
+             }else{
+
+                 std::cout << "Naah! the correct result is : "
+
+                     << num1 + num2 << std::endl;
+
+             }
+
+            break;
+
+            case 1 :
+
+             if(result == (num1 - num2)){
+
+                 std::cout << "Congratulations! You got the result "
+
+                     << result << " right!" << std::endl;
+
+             }else{
+
+                 std::cout << "Naah! the correct result is : "
+
+                     << num1 - num2 << std::endl;
+
+             }
+
+            break;
+
+            case 2 :
+
+             if(result == (num1 * num2)){
+
+                 std::cout << "Congratulations! You got the result "
+
+                     << result << " right!" << std::endl;
+
+             }else{
+
+                 std::cout << "Naah! the correct result is : "
+
+                     << num1 * num2 << std::endl;
+
+             }
+
+            break;
+
+           
+
+            default :
+
+             if(result == (num1 / num2)){
+
+                 std::cout << "Congratulations! You got the result "
+
+                     << result << " right!" << std::endl;
+
+             }else{
+
+                 std::cout << "Naah! the correct result is : "
+
+                     << num1 / num2 << std::endl;
+
+             }
+
+            break;
+
+        }
+
+
+
+        std::cout << std::endl;
+
+        std::cout << "Do you want me to try again ? (Y | N) : ";
+
+
+
+        char go_on;
+
+        std::cin >> go_on;
+
+
+
+        end = ((go_on == 'Y') || (go_on == 'y')) ? false : true;
+
+
+
+    }
+
+
+
+    std::cout << "See you later!" << std::endl;
+
+
+
+   
+
+    return 0;
+
+}
+
+
+
+
+    
+    
+    
+    
+}
