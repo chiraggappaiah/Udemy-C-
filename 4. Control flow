@@ -1,0 +1,264 @@
+// code 1
+#include "exercise.h"
+
+bool is_leap_year( unsigned int year){
+    
+    bool is_leap{};
+    
+    //Don't modify anything above this line
+    //Your code goes below this line
+ if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)){
+     is_leap = true;
+     std:: cout << "Its a leap year" << std:: endl;
+ }
+      
+else{
+     std:: cout << "Its not a leap year" << std:: endl;
+}
+    //Your code goes above this line
+    //Don't modify anything below this line
+    
+    return is_leap;
+}
+
+// code 2
+
+#include <iostream>
+int main(){
+ 
+    std::cout << "Please type in an integral value : " << std::endl;
+    int a;
+    std::cin >> a;
+    if((a %2) == 0){ 
+        std::cout << value << " is even" << std::endl;
+    }else{
+        std::cout << value << " is odd" << std::endl;
+    }
+ 
+    return 0;
+
+    // code 3
+    #include <iostream>
+
+
+
+int age;
+
+int main() {
+
+
+
+std::cout<<"Please type in your age :"<< std::endl<< std::endl;
+
+
+
+std::cin >> age ;
+
+
+
+if (age< 21){
+
+    std::cout <<"Sorry you are too young for the treatment"<< std::endl;
+
+}
+
+else if (age>39){
+
+    std:: cout <<"Sorry you are too old for the treatment"<< std::endl;
+
+}
+
+else if (21<=age<=39){
+
+    std:: cout <<"You are eligible for the treatment"<< std::endl;
+
+}
+
+return 0;
+
+}
+
+// code 4
+
+#include <iostream>
+
+
+
+int n;
+
+int main(){
+
+
+
+std::cout<<"Which day is today [1:Monday,.......7: sunday] :"<< std::endl<< std::endl;
+
+
+
+std::cin >> n ;
+
+
+
+    if (n==1) {
+
+    std:: cout <<"Today is Monday, lets have some fun;"<< std::endl;
+
+    }
+
+    else if (n==2){
+
+    std:: cout <<"Today is Tuesday, lets have some fun;"<< std::endl;
+
+    }
+
+    else if (n==3){
+
+    std:: cout <<"Today is Wednesday, lets have some fun;"<< std::endl;
+
+    }
+
+    else if (n==4){
+
+    std:: cout <<"Today is Thursday, lets have some fun;"<< std::endl;
+
+    }
+
+    else if (n==5){
+
+    std:: cout <<"Today is Friday, lets have some fun;"<< std::endl;
+
+    }
+
+    else if (n==6){
+
+    std:: cout <<"Today is Saturday, lets have some fun;"<< std::endl;
+
+    }
+
+    else if (n==7){
+
+    std:: cout <<"Today is Sunday, lets have some fun;"<< std::endl;
+
+    }
+
+    else{
+
+    std:: cout << n <<" is not a valid day. Bye!"<< std::endl;
+
+    }
+
+
+
+return 0;
+
+}
+
+// code 5
+
+#include <iostream>
+
+int n,a,b;
+int main(){
+std::cout<<"Which day is today [1:Monday,.......7: sunday] :"<< std::endl<< std::endl;
+std::cin >> n ;
+   if (n==1){
+   std:: cout <<"Today is Monday, lets have some fun;"<< std::endl;
+
+    }
+    else if (n==2){
+    std:: cout <<"Today is Tuesday, lets have some fun;"<< std::endl;
+
+    }
+    else if (n==3){
+    std:: cout <<"Today is Wednesday, lets have some fun;"<< std::endl;
+    }
+
+    else if (n==4){
+   std:: cout <<"Today is Thursday, lets have some fun;"<< std::endl;
+    }
+   else if (n==5){
+    std:: cout <<"Today is Friday, lets have some fun;"<< std::endl;
+    }
+    else if (n==6){
+   std:: cout <<"Today is Saturday, lets have some fun;"<< std::endl;
+   }
+   else if (n==7){
+   std:: cout <<"Today is Sunday, lets have some fun;"<< std::endl;
+    }
+    else{
+    std:: cout << n <<" is not a valid day. Bye!"<< std::endl;
+
+    }
+std:: cout<<"How many days have passed up today :"<< std::endl;
+
+std:: cin>>a;
+
+b=a+n;
+    if (b%7==1) {
+    std:: cout <<"Today is Monday, lets have some fun;"<< std::endl;
+    }
+    else if (b%7==2){
+    std:: cout <<"Today is Tuesday, lets have some fun;"<< std::endl;
+    }
+    else if (b%7==3){
+    std:: cout <<"Today is Wednesday, lets have some fun;"<< std::endl;
+    }
+    else if (b%7==4){
+    std:: cout <<"Today is Thursday, lets have some fun;"<< std::endl;
+    }
+    else if (b%7==5){
+    std:: cout <<"Today is Friday, lets have some fun;"<< std::endl;
+    }
+    else if (b%7==6){
+    std:: cout <<"Today is Saturday, lets have some fun;"<< std::endl;
+    }
+    else if (b%7==0){
+    std:: cout <<"Today is Sunday, lets have some fun;"<< std::endl;
+    }
+
+return 0;
+}
+
+//code 6
+
+#include <iostream>
+
+
+
+int x,y;
+
+int main()
+
+{
+
+    std::cout<<"Type in your x location"<<std::endl;
+
+    std::cin>>x;
+
+   
+
+    std::cout<<"Type in your y location"<<std::endl;
+
+    std::cin>>y;
+
+   
+
+    if(-10<x<10 && -5<y<5){
+
+       std::cout<<"You are completely surrounded. Don't move!"<<std::endl;
+
+    }
+
+    else{
+
+        std::cout<<"You're out of reach!"<<std::endl;
+
+    }
+
+   
+
+   
+
+    return 0;
+
+}
+
