@@ -1,0 +1,93 @@
+// code 1
+#include "exercise.h"
+
+int*  maximum_address( int data[], unsigned int size){
+
+  int max_elt{};
+  int * max_address;
+
+  for(unsigned int i{} ; i < size ; ++i){
+    if( data[i] > max_elt){
+      max_address = &data[i];
+     max_elt = data[i];
+    }
+  }
+
+  return max_address;
+}
+
+// code 2
+#include <iostream>
+#include "exercise.h"
+
+void shoot_forward( int data[], unsigned int offset){
+    
+    //Don't modify anything above this line
+    //Your code will go below this line
+      std::cout << "The element " << offset <<
+     " slots away from the beginning is : " <<
+      *(data+offset);
+
+      //Your code will go above this line
+      //Don't modify anything below this line
+}
+
+// code 3
+
+#include "exercise.h"
+
+int*  minimum_address( int data[], unsigned int size){
+
+  int * min_address;
+
+  // Don't modify anything above this line
+  //Your code should go below this line
+  //REMEMBER !ONLY POINTER ARITHMETIC SHOULD BE USED TO ACCESS ARRAY DATA
+     int min_elt{*(data)};
+
+  for(unsigned int i{} ; i < size ; ++i){
+    if( *(data + i) < min_elt){
+      min_address = data + i;
+     min_elt = data[i];
+    }
+  }
+
+  
+  //Your code should go above this line
+  //Don't modify anything below this line
+
+  return min_address;
+}
+
+// code 4
+
+#include <iostream>
+#include "exercise.h"
+
+
+void merge_arrays(int data1[], int data2[],
+           unsigned int size1, unsigned int size2){
+
+
+    int * new_array = new int [size1 + size2]; 
+
+    for(unsigned int i{}; i < (size1 + size2); ++i){
+
+      if(i < size1){
+        new_array[i] = data1[i];
+      }else{
+        new_array[i] = data2[i-size1];
+      }
+
+    }
+
+
+    for(unsigned int i{}; i < (size1 + size2); ++i){
+      std::cout << new_array[i] << " ";
+    }
+    
+    delete[] new_array;
+
+
+        
+}
