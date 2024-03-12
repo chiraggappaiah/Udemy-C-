@@ -1,0 +1,53 @@
+// code 1
+#include<iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+float cel;
+
+cout << "Please enter a degree of Celsius" <<endl;
+
+cin >> cel;
+
+float fahrenheit = (9.0 / 5) * cel+ 32;
+
+cout <<cel<< "Celsius is "<<fahrenheit<" Fahrenheit" <<endl;
+
+return 0;
+
+}
+
+// code 2
+#include <iostream>
+
+#include <cmath>
+
+
+
+int main(){
+
+double length, width, height, base area, volume;
+
+std:: cin<< length, width, height;
+
+base area= width*height;
+
+volume= base area*height;
+
+std:: cout << "length:" << length << std::endl;
+
+std:: cout << "width:" << width << std::endl;
+
+std:: cout << "height:" << height << std::endl;
+
+std:: cout << "base area is:" << base area << std::endl;
+
+std:: cout << "volume is:" << voulme << std::endl;
+
+return 0;
+
+}
